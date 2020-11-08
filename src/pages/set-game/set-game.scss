@@ -1,0 +1,63 @@
+page-set-game {
+    .ion-content{
+        width: 100%;
+        height: 100%;
+        // background-color: #a11313;
+        // margin:0 auto;
+        margin: 0;
+    }
+
+
+    .palette-svg{
+        // width: 100%;
+        // height: 100%;
+        
+        float: left;
+        width: 50%;
+        height: 100%;
+        background-color: #9c9c9c;
+        
+        
+    }
+
+    #three{
+
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        width: 50%;
+        height: 100%;
+        // background-color: aquamarine;
+    }
+
+    #canvasThree{
+        // position: static;
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    #btnVolver{
+        position: absolute;
+        bottom: 0;
+        right: left;
+        width: 50%;
+        background-color: #9c9c9c;
+      }
+
+    #divButton{
+        position: absolute;
+        top: 0%;
+        right: 0;
+        width: 50%;
+        text-align:center;
+        font-size: 200%;
+        color: #9c9c9c;
+        background-color: #9c9c9c;
+        visibility: hidden;
+        // background-color: red;
+        // font-family: Courier New;
+    }
+
+}
+

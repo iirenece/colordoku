@@ -1,0 +1,69 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Puzzle setting</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="ion-content">
+
+    <div #divThree id="three">
+      <canvas #canvasThree id="canvasThree"></canvas>
+      </div>
+
+      <div #divList id="div-list">
+      <ion-list class="ion-list"> 
+        
+        <ion-item class="ion-item" >
+            <ion-label class="ion-label">SCALE</ion-label>
+            <ion-range class="ion-range" min="0" max="100" [(ngModel)]="rangeScale" (ionChange)="watchRangeScale()" pin>
+              <ion-label class="ion-label" range-left>0%</ion-label>
+              <ion-label class="ion-label" range-right>100%</ion-label>
+            </ion-range>
+          </ion-item>
+
+          <ion-item class="ion-item">
+              <ion-label class="ion-label">TRANSLATION X</ion-label>
+              <ion-range class="ion-range" min="0" max="100" [(ngModel)]="rangeTranslationX" (ionChange)="watchRangeTranslationX()" pin>
+                <ion-label class="ion-label" range-left>0%</ion-label>
+                <ion-label class="ion-label" range-right>100%</ion-label>
+              </ion-range>
+            </ion-item>
+
+          <ion-item class="ion-item">
+              <ion-label class="ion-label">TRANSLATION Y</ion-label>
+              <ion-range class="ion-range" min="0" max="100" [(ngModel)]="rangeTranslationY" (ionChange)="watchRangeTranslationY()" pin>
+                <ion-label class="ion-label" range-left>0%</ion-label>
+                <ion-label class="ion-label" range-right>100%</ion-label>
+              </ion-range>
+            </ion-item>
+
+            <ion-item class="ion-item">
+                <ion-label class="ion-label">TRANSLATION Z (L)</ion-label>
+                <ion-range class="ion-range" min="0" max="100" [(ngModel)]="rangeTranslationZ" 
+                  (ionChange)="watchRangeTranslationZ()" [disabled]="rangeZDisabled" pin>
+                  <ion-label class="ion-label" range-left>0%</ion-label>
+                  <ion-label class="ion-label" range-right>100%</ion-label>
+                </ion-range>
+              </ion-item>
+
+              <ion-item class="ion-item">
+                <ion-label class="ion-label">FACES</ion-label>
+                <ion-range class="ion-range" min={{minRange}} max={{maxRange}} [(ngModel)]="rangeFaces"  pin>
+                  <ion-label class="ion-label" range-left>{{minRange}}</ion-label>
+                  <ion-label class="ion-label" range-right>{{maxRange}}</ion-label>
+                </ion-range>
+              </ion-item>
+
+        </ion-list>
+        <ion-item id="ion-item-button">
+          <button ion-button round block (click) ="goPalette()"  >
+            Create palette
+          </button>
+        </ion-item>
+  </div>
+    
+</ion-content>
